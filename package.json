@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "live": "node src/live/$EXERCISE/$EXERCISE.js < src/live/$EXERCISE/entrada.txt"
+  },
+  "dependencies": {
+    "scanf-printf-obi": "^1.0.0"
+  }
+}
