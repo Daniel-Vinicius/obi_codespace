@@ -1,21 +1,21 @@
-var scanf_stub = require("scanf-printf-obi").scanf,
-  printf_stub = require("scanf-printf-obi").sprintf,
-  fgets_stub = require("scanf-printf-obi").fgets;
+// var scanf_stub = require("scanf-printf-obi").scanf,
+//   printf_stub = require("scanf-printf-obi").sprintf,
+//   fgets_stub = require("scanf-printf-obi").fgets;
 
-function scanf(format) {
-  var res = scanf_stub.apply(this, Array.prototype.slice.call(arguments, 0));
-  eval(res);
-}
+// function scanf(format) {
+//   var res = scanf_stub.apply(this, Array.prototype.slice.call(arguments, 0));
+//   eval(res);
+// }
 
-function printf(args) {
-  var res = printf_stub.apply(this, Array.prototype.slice.call(arguments, 0));
-  process.stdout.write(res);
-}
+// function printf(args) {
+//   var res = printf_stub.apply(this, Array.prototype.slice.call(arguments, 0));
+//   process.stdout.write(res);
+// }
 
-function fgets(args) {
-  var res = fgets_stub.apply(this, Array.prototype.slice.call(arguments, 0));
-  eval(res);
-}
+// function fgets(args) {
+//   var res = fgets_stub.apply(this, Array.prototype.slice.call(arguments, 0));
+//   eval(res);
+// }
 
 /*
 ------------------------------------------------------------------------------------------------------------------
@@ -42,13 +42,15 @@ function main() {
   scanf("%d", "capacidade_oxigenacao");
 
   if (frequencia_atual > 3 * frequencia_repouso || capacidade_oxigenacao < 95) {
-    printf("%s\n", "diminuir")
-  }  else if (frequencia_atual < 2 * frequencia_repouso || capacidade_oxigenacao > 97) {
-    printf("%s\n", "aumentar")
+    printf("%s\n", "diminuir");
+  } else if (
+    frequencia_atual < 2 * frequencia_repouso ||
+    capacidade_oxigenacao > 97
+  ) {
+    printf("%s\n", "aumentar");
   } else {
-    printf("%s\n", "manter")
+    printf("%s\n", "manter");
   }
-
 
   return null;
 }

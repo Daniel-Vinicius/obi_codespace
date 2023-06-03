@@ -21,22 +21,12 @@ function fgets(args) {
 ------------------------------------------------------------------------------------------------------------------
 */
 
-var n_moedas;
-var n_marinheiros; // sem o capitao
-// capitao recebe o dobro
-// quantas o capitao deve receber?
+var A;
+var B;
 
-function main() {
-  scanf("%d", "n_moedas");
-  scanf("%d", "n_marinheiros");
+scanf("%d", "A");
+scanf("%d", "B");
 
-  let moedas_por_marinheiro_e_capitao = parseInt(
-    n_moedas / (n_marinheiros + 2)
-  );
+printf("%d\n", A);
 
-  let n_moedas_capitao = moedas_por_marinheiro_e_capitao * 2;
-
-  return printf("%d\n", n_moedas_capitao);
-}
-
-main();
+return 0;

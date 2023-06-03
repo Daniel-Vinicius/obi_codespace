@@ -30,17 +30,18 @@ function main() {
   scanf("%d", "B");
   scanf("%d", "C");
 
-  if (B - A < C - B) {
-    return printf("%s\n", 1);
+  let idadeMin = Math.min(A, B, C);
+  let idadeMax = Math.max(A, B, C);
+  let idadeMeio = 0;
+
+  if (A !== idadeMin && A !== idadeMax) idadeMeio = A;
+  if (B !== idadeMin && B !== idadeMax) idadeMeio = B;
+  if (C !== idadeMin && C !== idadeMax) idadeMeio = C;
+  else {
+    idadeMeio = idadeMin;
   }
 
-  if (B - A > C - B) {
-    return printf("%s\n", -1);
-  }
-
-  if (B - A == C - B) {
-    return printf("%s\n", 0);
-  }
+  printf("%s\n", idadeMeio);
 
   return null;
 }
