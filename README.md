@@ -3,5 +3,5 @@
 
 Run exercise
 ```bash
-EXERCISE="tesouro" npm run live
+EXERCISE="var" npm run prova:1
 ```
